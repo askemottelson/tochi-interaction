@@ -1,5 +1,5 @@
 import unittest
-from cleantext import CleanText
+from cleantext import CleanText, clean_papers
 from helpfunctions import make_session_regs
 from proceedings import get_proceedings
 import numpy as np
@@ -25,6 +25,9 @@ class CleanTextTest(unittest.TestCase):
         # random subset
         np.random.shuffle(self.proceedings)
         self.proceedings = self.proceedings[0:100]
+
+        # test that the combination runs without errs
+        clean_papers(self.proceedings)
 
     def test_fix_hyphen(self):
         cleaner = CleanText(MockPaper(1981))

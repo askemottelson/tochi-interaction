@@ -7,10 +7,11 @@ Tools for turning extracted text from CHI PDFs into cleaned strings to perform a
 The tools remove ill-formed OCR, lexical optimizations, and remove headers, author info
 and other meta data from strings.
 
+See `cleantext/cleantext.py` for how to clean your own extracted CHI PDFs
+
 **Run tests**:  
 `python -m cleantext.test`
 
-See `cleantext/cleantext.py` for how to clean your own extracted CHI PDFs
 
 `modifiers/`  
 Tools for extracting interaction modifiers.

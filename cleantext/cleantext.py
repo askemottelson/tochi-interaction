@@ -382,11 +382,9 @@ class CleanText(object):
 def clean_papers(proceedings):
     ses, regs = make_session_regs()
 
-    print "updating", len(proceedings), "papers"
-
     cleaned = []
 
-    for i, paper in enumerate(proceedings):
+    for paper in proceedings:
         cleaner = CleanText(paper)
         cleaner.text = cleaner.remove_symbols()
         cleaner.text = cleaner.remove_references()
@@ -405,7 +403,6 @@ def clean_papers(proceedings):
         cleaner.text = cleaner.remove_math_and_punctuation_lines()
 
         cleaned.append(cleaner.text)
-        print "(", i, "/", len(proceedings), ")", " done -->", paper.id
 
     return cleaned
 
