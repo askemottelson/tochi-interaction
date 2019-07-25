@@ -1,8 +1,0 @@
-(dp0
-S'dummy'
-p1
-I1
-sS'paper'
-p2
-I1
-s.
