@@ -1,5 +1,7 @@
 ### Python tools for `What Do We Mean by “Interaction”? An Analysis of 35 Years of CHI`
 
+This repo contains the scripts to clean text from CHI papers (from PDF extraction); and to extract modifiers about interaction. The repo does not contain the actual data itself, why you need to implement `get_proceedings` in `proceedings.py`, such that it returns the raw texts from the papers you want to analyze.
+
 Developed for Python 2.7; install required packaged using `pip install -r requirements.txt`
 
 `cleantext/`  
