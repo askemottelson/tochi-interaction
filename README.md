@@ -1,17 +1,20 @@
-## Python tools for `What Do We Mean by “Interaction”? An Analysis of 35 Years of CHI`
+### Python tools for `What Do We Mean by “Interaction”? An Analysis of 35 Years of CHI`
 
 Developed for Python 2.7; install required packaged using `pip install -r requirements.txt`
 
 `cleantext/`
-> Tools for turning extracted text from CHI PDFs into cleaned strings to perform analysis.
-> The tools remove ill-formed OCR, lexical optimizations, and remove headers, author info
-> and other meta data from strings.
-> run tests: `python -m cleantext.test`
+Tools for turning extracted text from CHI PDFs into cleaned strings to perform analysis.
+The tools remove ill-formed OCR, lexical optimizations, and remove headers, author info
+and other meta data from strings.
 
-> See `cleantext/cleantext.py` for how to clean your own extracted CHI PDFs
+*Run tests*:
+
+`python -m cleantext.test`
+
+See `cleantext/cleantext.py` for how to clean your own extracted CHI PDFs
 
 `modifiers/`
-> Tools for extracting interaction modifiers.
+Tools for extracting interaction modifiers.
 
 
 Citation:
