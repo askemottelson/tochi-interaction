@@ -1,8 +1,6 @@
 from sqlalchemy.sql.expression import func
 from cleantext.helpfunctions import cache_load, cache_save
 
-venue_CHI = 49865  # CHI
-
 
 class MockPaper():
     def __init__(self, obj):
@@ -28,20 +26,26 @@ class MockPaperAuthor():
             self.name = None
             self.affiliation = None
 
-
+'''
+    This method should return a list
+    of Paper objects representing the papers in the
+    proceedings you wish to analyze.
+    The paper class definition can be seen in MockPaper
+'''
 def get_proceedings(min_year=1981, max_year=2018):
-    ''' we need to fetch the data one
-        year at a time, otherwise
-        mysql will not work (too much data)
-    '''
-
+    # example implementation
+    # of fetching CHI paper texts from MySQL
+    # and caching in a pkl format
     # data = []
     # for i in range(min_year, max_year + 1):
+    #     # we need to fetch the data one
+    #     # year at a time, otherwise
+    #     # mysql will not work
     #     try:
     #         my_year = cache_load("proceedings_"+str(i))
-    #     except:
+    #     except Exception:
     #         raw = db.query(Paper).filter(
-    #             Paper.venue_id == venue_CHI,
+    #             Paper.venue_id == 49865,  # CHI
     #             Paper.year == i,
     #             func.length(Paper.clean_text) > 100
     #         ).all()
@@ -49,14 +53,17 @@ def get_proceedings(min_year=1981, max_year=2018):
     #         cache_save("proceedings_"+str(i), my_year)
     #     data.extend(my_year)
 
-
-    # replace this with own implementation
-    # e.g., retrieve from DB
+    # DUMMY implementation
     o = type('',(object,),{
-        'text': "dummy data",
+        'title': 'dummy paper',
+        'text': 'dummy text',
+        'clean_text': 'dummy text data',
         'id': 0,
+        'DOI': 'X',
         'year': 2016
     })()  # dict -> obj
     data = [o]
+
+    raise Exception("Please implement get_proceedings!")
 
     return data

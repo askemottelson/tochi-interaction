@@ -2,9 +2,9 @@
 
 This repo contains the scripts to clean text from CHI papers (from PDF extraction); and to extract modifiers about interaction. The repo does not contain the actual data itself, why you need to implement `get_proceedings` in `proceedings.py`, such that it returns the raw texts from the papers you want to analyze.
 
-Developed for Python 2.7; install required packaged using `pip install -r requirements.txt`
+Developed for Python 2.7; install required packages using `pip install -r requirements.txt`
 
-`cleantext/`  
+### `cleantext/`  
 Tools for turning extracted text from CHI PDFs into cleaned strings to perform analysis.
 The tools remove ill-formed OCR, lexical optimizations, and remove headers, author info
 and other meta data from strings.
@@ -15,8 +15,11 @@ See `cleantext/cleantext.py` for how to clean your own extracted CHI PDFs
 `python -m cleantext.test`
 
 
-`modifiers/`  
-Tools for extracting interaction modifiers.
+### `modifiers/`  
+Extracting 'interaction' modifiers. Implement `get_proceedings` in `proceedings.py` first.
+
+Run it:  
+`python -m modifiers.noun_phrases`
 
 
 Citation:
