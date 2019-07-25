@@ -1,0 +1,8 @@
+nltk
+textstat
+numpy
+matplotlib
+seaborn
+sklearn
+gensim
+flake8
