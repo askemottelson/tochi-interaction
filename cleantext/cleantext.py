@@ -163,14 +163,6 @@ class CleanText(object):
         for pattern in patterns:
             res = pattern.sub("", res)
 
-        if "PROCEEDINGS" in res or "SESSION:" in res or "Session:" in res:
-            if self.id not in [
-                    80886200,
-                    80031347]:  # the capital word PROCEEDINGS is used to describe the subject
-                # also, Section called Practive-Session: was wrongfully flagged
-                print res
-               # raise Exception("header " + str(self.id))
-
         return res
 
     def remove_misc(self):
