@@ -53,7 +53,7 @@ def get_proceedings(min_year=1981, max_year=2018):
     #         cache_save("proceedings_"+str(i), my_year)
     #     data.extend(my_year)
 
-    # DUMMY implementation
+    DUMMY implementation
     o = type('',(object,),{
         'title': 'dummy paper',
         'text': 'dummy text',
@@ -63,7 +63,6 @@ def get_proceedings(min_year=1981, max_year=2018):
         'year': 2016
     })()  # dict -> obj
     data = [o]
-
     raise Exception("Please implement get_proceedings!")
 
     return data

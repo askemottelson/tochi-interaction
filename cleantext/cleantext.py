@@ -46,15 +46,9 @@ class CleanText(object):
         for k in [k7, k6, k5, k4, k3, k2, k1, k8, k9, k10, k11]:
             res = k.sub("", res)
 
-        if "KEYWORDS:" in res or "Author Keywords" in res or "ACM Classification" in res:
-            print res
-           # raise Exception("has keywords!" + str(self.id))
-
         return res
 
     def remove_until_abstract(self):
-        if self.id in [80015048]:
-            return self.text
         res = self.text
 
         pattern = re.compile(r"^(?:.*?)(ABSTRACT|Abst(r|t)act)\:?", re.DOTALL)
@@ -303,15 +297,7 @@ class CleanText(object):
         return res
 
     def simple_fix(self, myStr):
-        return myStr.replace(
-            "",
-            "").replace(
-            "&amp;",
-            "&").replace(
-            "&lt;",
-            "<").replace(
-                "&gt;",
-            ">")
+        return myStr.replace("", "").replace("&amp;","&").replace("&lt;","<").replace("&gt;",">")
 
     # Do we still need to "repair" broken lines?
     # sure but this one doesn't work :)
