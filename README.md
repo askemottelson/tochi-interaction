@@ -26,7 +26,7 @@ Citation:
 ```
 @article{Hornbaek:2019:WMX:3341168.3325285,
  author = {Hornb{\ae}k, Kasper and Mottelson, Aske and Knibbe, Jarrod and Vogel, Daniel},
- title = {What Do We Mean by \&\#x0201C;Interaction\&\#x0201D;? An Analysis of 35 Years of CHI},
+ title = {What Do We Mean by `Interaction'? An Analysis of 35 Years of CHI},
  journal = {ACM Trans. Comput.-Hum. Interact.},
  issue_date = {July 2019},
  volume = {26},
